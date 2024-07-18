@@ -1,0 +1,220 @@
+@import "reset";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header {
+  background-color: rgba(244, 236, 224, 1);
+  font-family: "Poppins", sans-serif;
+
+  .nav {
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__list {
+      width: 800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &__link {
+      color: #000;
+      opacity: 0.7;
+      font-size: 20px;
+    }
+
+    &__button {
+      width: 140px;
+      height: 50px;
+      font-size: 20px;
+      background-color: rgba(255, 115, 59, 1);
+      color: #fff;
+      border-radius: 5px;
+      border-style: none;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+        background-color: rgb(247, 79, 12);
+      }
+      transition: 1s;
+    }
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include mobile {
+      width: 500px;
+    }
+    &__image {
+      width: 20px;
+      height: 40px;
+    }
+    &__title {
+      font-size: 30px;
+      font-weight: 600;
+    }
+  }
+}
+
+#main {
+  width: 100%;
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(244, 236, 224, 1);
+  }
+  .content {
+    text-align: center;
+    &__text {
+      font-family: "Poppins", sans-serif;
+      font-size: 50px;
+      font-weight: 600;
+      width: 700px;
+      @include mobile {
+        width: 575px;
+      }
+      &-title {
+      }
+    }
+  }
+  .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    font-family: "Poppins", sans-serif;
+
+    &__started {
+      width: 170px;
+      height: 50px;
+      font-size: 20px;
+      background-color: rgba(255, 115, 59, 1);
+      color: #fff;
+      border-radius: 5px;
+      border-style: none;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+        background-color: rgb(247, 79, 12);
+      }
+      transition: 1s;
+    }
+    &__demo {
+      width: 170px;
+      height: 50px;
+      font-size: 20px;
+      background-color: rgb(247, 203, 138);
+      color: rgba(255, 115, 59, 1);
+      border-radius: 5px;
+      border-style: none;
+      cursor: pointer;
+      &:hover {
+        color: rgb(245, 245, 245);
+        background-color: rgb(245, 149, 111);
+      }
+      transition: 1s;
+    }
+  }
+
+  .image {
+    @include mobile {
+      width: 575px;
+    }
+  }
+  .company {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    @include mobile {
+      flex-wrap: wrap;
+      height: 265px;
+    }
+
+    &__image {
+      width: 300px;
+      height: 70px;
+      @include mobile {
+        width: 200px;
+      }
+    }
+  }
+}
+
+#footer {
+  background-color: #000;
+  height: 300px;
+  font-family: "Poppins", sans-serif;
+  .footer-upper {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      font-size: 50px;
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    &__list {
+      width: 700px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    &__item {
+      font-size: 20px;
+    }
+    &__link {
+      color: #fff;
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    .text {
+      @include mobile {
+        text-align: center;
+        margin-top: 30px;
+      }
+      &__title {
+        color: #fff;
+      }
+    }
+    .social-list {
+      width: 600px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      @include mobile {
+        width: 575px;
+      }
+    }
+  }
+}
